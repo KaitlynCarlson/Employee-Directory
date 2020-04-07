@@ -1,10 +1,10 @@
 import React from "react";
-function appHeader() {
+function AppHeader() {
   return (
     <div
       style={{
-        backgroundColor: "#040F59",
-        borderBottom: "5px solid red",
+        backgroundColor: "#02082E",
+        borderBottom: "10px solid #BB190F",
         display: "flex",
         flexFlow: "column",
         alignItems: "center",
@@ -17,6 +17,11 @@ function appHeader() {
         alt="Employee Directory Logo"
         height="75px"
         width="75px"
+        style={{
+          boxShadow: "1px 1px 2px 1px white",
+          borderRadius: "70%",
+          padding: "10px",
+        }}
       />
       <h1 className="display-4" style={{ color: "white" }}>
         Employee Directory
@@ -27,4 +32,4 @@ function appHeader() {
     </div>
   );
 }
-export default appHeader;
+export default AppHeader;
