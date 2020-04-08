@@ -8,7 +8,7 @@ function DOBSearch() {
       style={{ display: "flex", flexFlow: "row", padding: "3%" }}
     >
       <label class="form-check-label">
-        <span class="badge badge-secondary" style={{ padding: "12px" }}>
+        <span class="badge badge-light" style={{ padding: "12px" }}>
           DOB
         </span>
       </label>
