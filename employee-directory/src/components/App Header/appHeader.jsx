@@ -17,11 +17,6 @@ function AppHeader() {
         alt="Employee Directory Logo"
         height="75px"
         width="75px"
-        style={{
-          boxShadow: "1px 1px 2px 1px white",
-          borderRadius: "70%",
-          padding: "10px",
-        }}
       />
       <h1 className="display-4" style={{ color: "white" }}>
         Employee Directory

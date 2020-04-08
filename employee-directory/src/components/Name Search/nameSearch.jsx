@@ -7,7 +7,7 @@ function NameSearch() {
       style={{
         display: "flex",
         flexFlow: "row",
-        width: "60%",
+        width: "50%",
         paddingLeft: "2%",
       }}
     >
