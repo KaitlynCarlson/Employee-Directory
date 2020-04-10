@@ -4,11 +4,11 @@ import NameSearch from "../Name Search/nameSearch";
 function DOBSearch() {
   return (
     <div
-      class="form-group"
+      className="form-group"
       style={{ display: "flex", flexFlow: "row", padding: "3%" }}
     >
-      <label class="form-check-label">
-        <span class="badge" style={{ padding: "12px" }}>
+      <label className="form-check-label">
+        <span className="badge" style={{ padding: "12px" }}>
           DOB
         </span>
       </label>
@@ -21,7 +21,7 @@ function DOBSearch() {
       />
       <input
         type="date"
-        class="form-control"
+        className="form-control"
         id="startingDate"
         placeholder="Format: YYYY-MM-DD"
         style={{ width: "20%" }}

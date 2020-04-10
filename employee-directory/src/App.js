@@ -1,13 +1,13 @@
 import React from "react";
 import AppHeader from "./components/App Header/appHeader";
 import DOBSearch from "./components/DOB Search/dobSearch";
-import DirectiryColumnsHeader from "./components/Directory Columns Header/directoryColumnsHeader";
+import DirectoryColumnsHeader from "./components/Directory Columns Header/directoryColumnsHeader";
 function App() {
   return (
     <div>
       <AppHeader />
       <DOBSearch />
-      <DirectiryColumnsHeader />
+      <DirectoryColumnsHeader />
     </div>
   );
 }

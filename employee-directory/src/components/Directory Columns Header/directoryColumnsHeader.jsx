@@ -1,36 +1,46 @@
-import React from "react";
+import React, { Component } from "react";
+import API from "../../utils/API";
+import Employees from "../Employee Card/employeeCard";
+class DirectoryColumnsHeader extends React.Component {
+  state = {
+    employees: [],
+  };
 
-function DirectoryColumnsHeader() {
-  return (
-    <div class="container">
-      <h2>Directory</h2>
-      <p>
-        Search by an exact date of birth, a range of dob, or name to quickly
-        access employee data.
-      </p>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th>DOB</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <img src="https://via.placeholder.com/150" />
-            </td>
-            <td>John Doe</td>
-            <td>XXX-XXX-XXXX</td>
-            <td>john@example.com</td>
-            <td>xx/xx/xxxx</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
+  componentDidMount() {
+    this.getEmployees();
+  }
+  getEmployees = () => {
+    API.getEmployees()
+      .then((res) => {
+        this.setState({
+          employees: res.data.results,
+        });
+        console.log(this.state.employees);
+      })
+      .catch((err) => console.log(err));
+  };
+  render() {
+    return (
+      <div class="container">
+        <h2>Directory</h2>
+        <p>
+          Search by an exact date of birth, a range of dob, or name to quickly
+          access employee data.
+        </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>DOB</th>
+            </tr>
+          </thead>
+          <Employees employees={this.state.employees} />
+        </table>
+      </div>
+    );
+  }
 }
 export default DirectoryColumnsHeader;

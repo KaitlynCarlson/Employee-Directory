@@ -3,7 +3,7 @@ import React from "react";
 function NameSearch() {
   return (
     <div
-      class="form-group"
+      className="form-group"
       style={{
         display: "flex",
         flexFlow: "row",
@@ -11,14 +11,14 @@ function NameSearch() {
         paddingLeft: "2%",
       }}
     >
-      <label class="form-check-label">
-        <span class="badge" style={{ padding: "12px" }}>
+      <label className="form-check-label">
+        <span className="badge" style={{ padding: "12px" }}>
           Name
         </span>
       </label>
       <input
         type="text"
-        class="form-control"
+        className="form-control"
         id="nameSearch"
         placeholder="Employee Name"
       />
