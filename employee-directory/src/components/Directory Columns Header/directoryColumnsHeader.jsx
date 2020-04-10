@@ -46,10 +46,10 @@ class DirectoryColumnsHeader extends React.Component {
 
               <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a className="dropdown-item" href="#">
-                  Name
+                  Employee Names Alphabetically
                 </a>
                 <a className="dropdown-item" href="#">
-                  DOB
+                  Employee DOB Ascending
                 </a>
               </div>
             </div>
