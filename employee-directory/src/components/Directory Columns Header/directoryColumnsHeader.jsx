@@ -20,6 +20,14 @@ class DirectoryColumnsHeader extends React.Component {
       })
       .catch((err) => console.log(err));
   };
+  // handleNameSort = (event) => {
+  //   if (
+  //     document.getElementById(`#sortEmployees option:selected`) ===
+  //     document.getElementById(`#nameSort`)
+  //   ) {
+  //     console.log(`Name sort selected`);
+  //   }
+  // };
   render() {
     return (
       <div>
@@ -44,11 +52,15 @@ class DirectoryColumnsHeader extends React.Component {
                 Sort Employees
               </a>
 
-              <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a className="dropdown-item" href="#">
+              <div
+                className="dropdown-menu"
+                id="sortEmployees"
+                aria-labelledby="dropdownMenuLink"
+              >
+                <a className="dropdown-item" href="#" value="name">
                   Employee Names Alphabetically
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="#" value="dob">
                   Employee DOB Ascending
                 </a>
               </div>
