@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import Employees from "../Employee Card/employeeCard";
+import DOBSearch from "../DOB Search/dobSearch";
 class DirectoryColumnsHeader extends React.Component {
   state = {
     employees: [],
@@ -21,24 +22,27 @@ class DirectoryColumnsHeader extends React.Component {
   };
   render() {
     return (
-      <div className="container">
-        <h2>Directory</h2>
-        <p>
-          Search by an exact date of birth, a range of dob, or name to quickly
-          access employee data.
-        </p>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Image</th>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Email</th>
-              <th>DOB</th>
-            </tr>
-          </thead>
-          <Employees employees={this.state.employees} />
-        </table>
+      <div>
+        <DOBSearch />
+        <div className="container">
+          <h2>Directory</h2>
+          <p>
+            Search by an exact date of birth, a range of dob, or name to quickly
+            access employee data.
+          </p>
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>DOB</th>
+              </tr>
+            </thead>
+            <Employees employees={this.state.employees} />
+          </table>
+        </div>
       </div>
     );
   }

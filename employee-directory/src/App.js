@@ -6,7 +6,6 @@ function App() {
   return (
     <div>
       <AppHeader />
-      <DOBSearch />
       <DirectoryColumnsHeader />
     </div>
   );

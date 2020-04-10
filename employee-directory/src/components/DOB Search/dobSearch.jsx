@@ -16,14 +16,12 @@ function DOBSearch() {
         type="date"
         className="form-control"
         id="startingDate"
-        placeholder="Format: YYYY-MM-DD"
         style={{ width: "20%" }}
       />
       <input
         type="date"
         className="form-control"
         id="startingDate"
-        placeholder="Format: YYYY-MM-DD"
         style={{ width: "20%" }}
       />
 
