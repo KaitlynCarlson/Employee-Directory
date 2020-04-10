@@ -1,6 +1,5 @@
 import React from "react";
 import AppHeader from "./components/App Header/appHeader";
-import DOBSearch from "./components/DOB Search/dobSearch";
 import DirectoryColumnsHeader from "./components/Directory Columns Header/directoryColumnsHeader";
 function App() {
   return (
