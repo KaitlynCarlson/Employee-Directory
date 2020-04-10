@@ -21,13 +21,13 @@ class DirectoryColumnsHeader extends React.Component {
   };
   render() {
     return (
-      <div class="container">
+      <div className="container">
         <h2>Directory</h2>
         <p>
           Search by an exact date of birth, a range of dob, or name to quickly
           access employee data.
         </p>
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
               <th>Image</th>
