@@ -29,29 +29,13 @@ class Directory extends React.Component {
     console.log(output);
     if (output === "name") {
       const sortedEmployees = this.state.employees;
-      sortedEmployees.sort(function (a, b) {
-        if (a.name.last < b.name.last) {
-          return -1;
-        }
-        if (a.name.last > b.name.last) {
-          return 1;
-        }
-        return 0;
-      });
+      sortedEmployees.sort((a, b) => a.name.last.localeCompare(b.name.last));
       this.setState({ employees: sortedEmployees });
     }
     if (output === "dob") {
       this.setState({ sortType: "dob" });
       const sortedEmployees = this.state.employees;
-      sortedEmployees.sort(function (a, b) {
-        if (a.dob.date < b.dob.date) {
-          return -1;
-        }
-        if (a.dob.date > b.dob.date) {
-          return 1;
-        }
-        return 0;
-      });
+      sortedEmployees.sort((a, b) => a.dob.date.localeCompare(b.dob.date));
       this.setState({ employees: sortedEmployees });
     }
     if (output === "nosort") {
