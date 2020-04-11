@@ -1,11 +1,11 @@
 import React from "react";
 import AppHeader from "./components/App Header/appHeader";
-import DirectoryColumnsHeader from "./components/Directory Columns Header/directoryColumnsHeader";
+import Directory from "./components/Directory/directory";
 function App() {
   return (
     <div>
       <AppHeader />
-      <DirectoryColumnsHeader />
+      <Directory />
     </div>
   );
 }
