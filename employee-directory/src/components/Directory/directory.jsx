@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import API from "../../utils/API";
 import Employees from "../Employee Card/employeeCard";
 import DOBSearch from "../DOB Search/dobSearch";
-import SortDropDown from "../SortDropDown/SortDropDown";
 
 class Directory extends React.Component {
   state = {
@@ -13,7 +12,6 @@ class Directory extends React.Component {
 
   componentDidMount() {
     this.getEmployees();
-    console.log(this.state.sortType);
   }
   getEmployees = () => {
     API.getEmployees()
@@ -25,24 +23,47 @@ class Directory extends React.Component {
       })
       .catch((err) => console.log(err));
   };
-  handleSort = () => {
+  handleSortState = () => {
     const selectElement = document.querySelector("#sortSelection");
     const output = selectElement.value;
     console.log(output);
     if (output === "name") {
-      this.setState({ sortType: "name" });
+      const sortedEmployees = this.state.employees;
+      sortedEmployees.sort(function (a, b) {
+        if (a.name.last < b.name.last) {
+          return -1;
+        }
+        if (a.name.last > b.name.last) {
+          return 1;
+        }
+        return 0;
+      });
+      this.setState({ employees: sortedEmployees });
     }
     if (output === "dob") {
       this.setState({ sortType: "dob" });
+      const sortedEmployees = this.state.employees;
+      sortedEmployees.sort(function (a, b) {
+        if (a.dob.date < b.dob.date) {
+          return -1;
+        }
+        if (a.dob.date > b.dob.date) {
+          return 1;
+        }
+        return 0;
+      });
+      this.setState({ employees: sortedEmployees });
     }
     if (output === "nosort") {
       this.setState({ sortType: "nosort" });
     }
   };
+
   render() {
     return (
       <div>
         <DOBSearch />
+
         <div className="container">
           <h2>Directory</h2>
           <p>
@@ -58,7 +79,7 @@ class Directory extends React.Component {
                 height: "35px",
               }}
               id="sortSelection"
-              onChange={this.handleSort}
+              onChange={this.handleSortState}
             >
               <option value="nosort">No sort applied</option>
               <option value="name">Sort by Name</option>

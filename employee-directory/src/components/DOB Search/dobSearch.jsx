@@ -24,7 +24,6 @@ function DOBSearch() {
         id="startingDate"
         style={{ width: "20%" }}
       />
-
       <NameSearch />
     </div>
   );
