@@ -1,14 +1,13 @@
 import React from "react";
 
-function NameSearch() {
+function NameSearch({ handleNameInput }) {
   return (
     <div
       className="form-group"
       style={{
         display: "flex",
         flexFlow: "row",
-        width: "50%",
-        paddingLeft: "2%",
+        width: "100%",
       }}
     >
       <label className="form-check-label">
@@ -21,6 +20,7 @@ function NameSearch() {
         className="form-control"
         id="nameSearch"
         placeholder="Employee Name"
+        onChange={handleNameInput}
       />
     </div>
   );
