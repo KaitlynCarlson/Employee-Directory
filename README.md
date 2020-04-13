@@ -4,7 +4,7 @@ An employee directory built with React in which employees can be searched by dat
 
 ![Employee Directory](./demo/homepage.png)
 
-Check out the deployed app on GitHub Pages today :
+Check out the deployed app on GitHub Pages today : [Employee Directory](https://shrouded-ocean-10504.herokuapp.com/)
 
 ## Table of Contents
 
